@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: snow;
+}
+
+a{
+    outline: none;
+    text-decoration: none;
+    color: #223637;
+}
+
+a:visited {
+    color: #223637;
+}
+
+.separator {
+    width:100%;
+    border: 1px solid snow;
+}
+
+#app {
+    margin-top: 25px;
+}
+
+#top-bar {
+    background: #223637;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+#top-bar .icons{
+ color:rgb(197, 196, 196);
+}
+
+.desktopIcon {
+    margin: 10px 10px 10px 15px;
+    width: 64px;
+    height: 64px;
+}
+
+.iconRow {
+    display: inline-block;
+}
+
+.active {
+    background-color: #4CAF50;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#openedItems ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    max-width: 50%;
+    z-index: 2;
+}
+
+#openedItems li {
+    display: inline-block;
+}
+
+#openedItems li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+#openedItems li a:hover {
+    background-color: #4CAF50;
+    border-radius: 15px;
+}
+
+#mainMenu {
+   
+    width: auto;
+    height: auto;
+    background-color:#223637;
+    float: left;
+    display: none;
+    border-bottom-right-radius: 4px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 99;
+}
+
+#mainMenu .Header {
+    width: 100%;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    background-color: #1e4850;
+    border-top-right-radius: 4px;
+    color: aliceblue;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+}
+.menuContent a{
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    padding: 4px;
+    
+}
+
+.menuContent a:hover {
+    background-color: dodgerblue;
+    width: 100%;
+}
+
+
+#noticeBar {
+    width: 25%;
+    max-height: 900px;
+    min-height: 600px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0);
+    opacity: 0.3;
+    float: right;
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    z-index: 99;
+}
+
+#noticeBar .Header {
+    width: 100%;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    background-color: #1e4850;
+    color: aliceblue;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.content {
+    font-size: 16px;
+    color: aliceblue;
+    padding: 4px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.danger {
+    color: #e73936;
+}
+
+.warning {
+    color: #e4b13a;
+}
+
+.alert {
+    color: #2779a3;
+}
+
+.iconLabel {
+    font-size: 15px;
+    display: block;
+    margin-top: -10px;
+    margin-left: 5px;
+    text-align: center
+}
+
+.mainMenu img {
+    width: 32px;
+    height: 32px;
+}
+
+.mainMenuContent {
+    font-size: 14px;
+    color: beige;
+}
+
+.pull-left {
+    float: left;
+    padding: 5px;
+}
+
+.pull-right {
+    float: right;
+    padding: 5px;
+}
+
+#dock-container {
+    margin-top: 30%;
+    background-color: lemonchiffon;
+}
+
+#dock ul {
+    list-style: none;
+    display: inline-block;
+}
+
+#dock li {
+    display: inline-block;
+}
+
+#dock li img {
+    width: 64px;
+    height: 64px;
+    -webkit-box-reflect: below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(255, 255, 255, .5)));
+    /* reflection is supported by webkit only */
+    -webkit-transition: all 0.3s;
+    -webkit-transform-origin: 50% 100%;
+}
+
+#dock li:hover img {
+    -webkit-transform: scale(2);
+    margin: 0 2em;
+}
+
+#dock li:hover+li img,
+#dock li.prev img {
+    -webkit-transform: scale(1.5);
+    margin: 0 1.5em;
+}

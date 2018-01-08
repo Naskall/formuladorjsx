@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulador by:OxSis</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/fontawesome-all.css">    
+</head>
+
+<body>
+    <div id="app">
+      
+
+
+        <div class="desktop">
+            <div class="iconRow">
+                <a href="#">
+                    <img src="assets/images/icons/receitas.png" alt="" title="Gera as receitas" class="desktopIcon"> </a>
+                <a href="#">
+                    <span class="iconLabel">Receita</span>
+                </a>
+
+            </div>
+
+            <div class="iconRow">
+                <a href="#">
+                    <img src="assets/images/icons/lote.ico" alt="" title="Gerencia os lotes" class="desktopIcon"> </a>
+                <a href="#">
+                    <span class="iconLabel">Lotes</span>
+                </a>
+            </div>
+            <div class="iconRow">
+                <a href="#">
+                    <img src="assets/images/icons/estoque.png" alt="" title="Consulta o estoque" class="desktopIcon"> </a>
+                <a href="#">
+                    <span class="iconLabel">Estoque</span>
+                </a>
+            </div>
+            <div class="iconRow">
+                <a href="#">
+                    <img src="assets/images/icons/usuarios.png" alt="users" title="Abre o controle de usuários" class="desktopIcon">
+                </a>
+                <a href="#">
+                    <span class="iconLabel">Usuários</span>
+                </a>
+
+            </div>
+
+
+        </div>
+        <!-- <div id="dock-container">
+        <div id="dock">
+        <ul>
+          <li><a href="http://android.com"><img src="http://www.iconninja.com/files/722/577/157/chrome-google-icon.svg"/></a></li>
+          <li><a href="http://palm.com"><img src="http://icons.iconarchive.com/icons/blackvariant/button-ui-microsoft-office-apps/1024/Microsoft-Office-PowerPoint-icon.png"/></a></li>
+          <li><a href="http://android.com"><img src="http://www.iconninja.com/files/722/577/157/chrome-google-icon.svg"/></a></li>
+          <li><a href="http://palm.com"><img src="http://icons.iconarchive.com/icons/blackvariant/button-ui-microsoft-office-apps/1024/Microsoft-Office-PowerPoint-icon.png"/></a></li>
+          <li><a href="http://android.com"><img src="http://www.iconninja.com/files/722/577/157/chrome-google-icon.svg"/></a></li>
+          <li><a href="http://palm.com"><img src="http://icons.iconarchive.com/icons/blackvariant/button-ui-microsoft-office-apps/1024/Microsoft-Office-PowerPoint-icon.png"/></a></li>
+          <li><a href="http://android.com"><img src="http://www.iconninja.com/files/722/577/157/chrome-google-icon.svg"/></a></li>
+          <li><a href="http://palm.com"><img src="http://icons.iconarchive.com/icons/blackvariant/button-ui-microsoft-office-apps/1024/Microsoft-Office-PowerPoint-icon.png"/></a></li>
+          <li><a href="http://android.com"><img src="http://www.iconninja.com/files/722/577/157/chrome-google-icon.svg"/></a></li>
+          <li><a href="http://palm.com"><img src="http://icons.iconarchive.com/icons/blackvariant/button-ui-microsoft-office-apps/1024/Microsoft-Office-PowerPoint-icon.png"/></a></li>
+        </ul>
+        <div class="base"></div>
+        </div>
+      </div>
+    -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="./assets/body.js" type="javascript"></script>
+    <script src="localhost:4172/bundle.js"></script>
+    
+    <script>
+    
+    window.$ = window.jQuery = require('jquery');
+    
+    $(document).ready(function () {
+            $("#openNotice").click(function () {
+                $("#noticeBar").toggle(300);
+            });
+        });
+
+        $(document).ready(function () {
+            $(".content").mouseleave(function () {
+                $("#noticeBar").toggle(300);
+            });
+        });
+
+
+        $(document).ready(function () {
+            $("#openMenu").click(function () {
+                $("#mainMenu").toggle(300);
+            });
+        });
+
+        $(document).ready(function () {
+            $(".menuContent").mouseleave(function () {
+                $("#mainMenu").toggle(300);
+            });
+        });
+    </script>
+</body>
+
+</html>
