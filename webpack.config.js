@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const fs = require('fs');
 
 module.exports = {
   entry: {  index: './src/app.js'
@@ -35,12 +36,6 @@ module.exports = {
       { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
         ]
   },
-  resolve: {
-    alias: {
-      translator: path.resolve(__dirname, './src/strings/languages-adapter'),
-      actionLanguage: path.resolve(__dirname, './src/strings/redux/actionLanguage') 
-    }
-  },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'src'),
@@ -53,9 +48,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
-      "React": "react",
-      "Translator": 'translator',
-      "ActionLanguage": 'actionLanguage',
+      "React": "react"
   }),
   ],
 };
