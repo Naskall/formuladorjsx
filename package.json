@@ -1,8 +1,8 @@
 {
-    "name": "ebm",
+    "name": "formuladorjsx",
     "version": "1.0.0",
     "description": "Gerenciador de formulações",
-    "main": "index.js",
+    
     "scripts": {
         "electron": "electron .",
         "dev-server": "webpack-dev-server",
@@ -15,7 +15,7 @@
         "osx": "electron-packager . EBM --platform=darwin --arch=x64",
         "build": "electron-packager . --all"
     },
-    "repository": "https://github.com/Nkallianz/ebm",
+    "repository": "https://github.com/Nkallianz/formuladorjsx",
     "keywords": [],
     "author": "Kaue Nascimento",
     "license": "",
@@ -50,7 +50,6 @@
         "babel-preset-stage-1": "^6.22.0",
         "electron-packager": "^6.0.2",
         "electron-prebuilt": "^0.36.12",
-        "jquery": "^3.2.1",
         "lodash": "^4.17.4",
         "lokijs": "^1.5.1",
         "moment": "^2.18.1",

@@ -1,19 +1,11 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router, Route, Switch, Redirect, Link } from 'react-router-dom';
-
-import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 
 //Redux
-import { Provider } from 'react-redux';
-import configureStore from './store/storeConfig';
+import {Provider} from 'react-redux';
 
 const store = configureStore();
-
-
 const app = (
-<Provider store={store}>
-  <Main/>
-</Provider>
-
-);
+<h1>Seu cu</h1>
+ );
+ReactDOM.render(app, document.getElementById('root'));
