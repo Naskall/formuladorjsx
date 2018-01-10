@@ -5,15 +5,14 @@ import Main from './components/Main/Main';
 
 import {Provider} from 'react-redux';
 
-import './assets/css/style.css';
+import './assets/css/style.scss';
 
-const store = configureStore();
+//const store = configureStore();
 
 const app = (
-    <Provider store={store}> 
+    <div>
      <Main />
-     
-    </Provider> 
+     </div>
  );
 
 ReactDOM.render(app, document.getElementById('root'));

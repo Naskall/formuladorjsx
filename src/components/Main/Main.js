@@ -8,7 +8,7 @@ export default class Main extends React.Component{
      return(
          <div className="container">
          <Header/>
-            <h1>Hello</h1>
+            
          <AppSet/> 
          </div>
      );
