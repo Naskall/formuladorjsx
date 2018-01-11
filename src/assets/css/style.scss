@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: snow;
+    background-image: url('../images/icons/oxsis_logo.png');
 }
 
 a{
@@ -32,6 +34,22 @@ a:visited {
     position: absolute;
     top: 0;
     z-index: 1;
+}
+
+.appset-bottom{
+    //align-content: center;
+    //width: 35%;
+    position: fixed;
+    bottom:10px;
+    left: 38%;
+    cursor: pointer;
+    
+
+}
+.appset-bg{
+    background:#223637 ;
+    border-radius: 2%;
+    width: 100%
 }
 
 #top-bar .icons{

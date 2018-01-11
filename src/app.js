@@ -3,15 +3,18 @@ import Main from './components/Main/Main';
 
 //Redux
 
-import {Provider} from 'react-redux';
+//import {Provider} from 'react-redux';
 
 import './assets/css/style.scss';
+import './assets/font-awesome/css/fontawesome-all.css';
+import './assets/font-awesome/scss/fa-regular.scss';
 
 //const store = configureStore();
 
 const app = (
-    <div>
-     <Main />
+    <div className="container">
+     
+       <Main />
      </div>
  );
 
