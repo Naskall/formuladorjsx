@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-import Navbar from './../components/navbar/navbar';
+//import Navbar from './../components/navbar/navbar';
 
 
 
 //Pages
-import Home from './../pages/home/home';
-import About from './../pages/about/about';
-import Recipes from './../pages/recipes/recipes';
-import Lot from './../pages/lot/lot';
-import Stock from './../pages/stock/stock';
-import Users from './../pages/users/users';
+//import Home from './../pages/home/home';
+//import About from './../pages/about/about';
+//import Recipes from './../pages/recipes/recipes';
+//import Lot from './../pages/lot/lot';
+//import Stock from './../pages/stock/stock';
+import Users from './../pages/usuarios/usuarios';
 
 const NotFoundPage = () => (
     <div>

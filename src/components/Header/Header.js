@@ -1,11 +1,12 @@
 import React,{Component} from 'react';
-
+import mainRouter from './../../routers/mainRouters';
 export default class Header extends Component{
 
 render(){
     return(
+        
         <div className="container">
-
+<mainRouter />
         <div id="top-bar" className="mainMenu">
             <a href="#" id="openMenu" className="pull-left">
                 <i className="fas fa-bars icons"></i>
@@ -20,7 +21,7 @@ render(){
             <div id="openedItems">
                 <ul>
                     <li>
-                        <a href="#" className="active">Formulador</a>
+                        <a href="#" class="active">Formulador</a>
                     </li>
                 </ul>
             </div>

@@ -1,5 +1,8 @@
 //import mainRouter from '../routers/mainRouters';
 import AppSetBar from "react-osx-dock";
+import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+
+
 // Obrigado Fernanda Nubank pelo nome do componente
 export default class  AppSet extends React.Component {
     
