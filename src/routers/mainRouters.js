@@ -5,7 +5,7 @@ import Navbar from './../components/NavBar/Navbar';
 import Home from './../pages/home/home';
 import Sobre from './../pages/sobre/sobre';
 import Receitas from './../pages/receitas/receitas';
-import Lote from './../pages/lote/lote';
+import Lotes from './../pages/lote/lote';
 import Estoque from './../pages/estoque/estoque';
 import Usuarios from './../pages/usuarios/usuarios';
 
@@ -29,7 +29,7 @@ export default class mainRouter extends React.Component {
                         <Route path="/usuarios" component={Usuarios}/>
                         <Route path="/receitas" component={Receitas}/>
                         <Route path="/estoque" component={Estoque}/>
-                        <Route path="/Lote" component={Lote}/>
+                        <Route path="/lotes" component={Lotes}/>
 
                         <Route component={NotFoundPage} />
                     </Switch>

@@ -1,32 +1,34 @@
 import React,{Component} from 'react';
+import {Badge,Menu,Icon,Button, message,Dropdown} from 'antd';
+
+const SubMenu = Menu.SubMenu;
+const MenuItemGroup = Menu.ItemGroup;
 
 export default class Header extends Component{
 
 render(){
     return(
-        
-        <div className="container">
-     <div id="top-bar" className="mainMenu">
-                <a href="#" id="openMenu" className="pull-left">
-                    <i className="fas fa-bars icons"></i>
-                </a>
-                <a href="#" id="openNotice" title="Mostrar Noticias (Em Breve)">
-                    <i className="fas fa-bell pull-right icons"></i>
-                </a>
-                <span title="Alterar seu perfil" className="pull-right">
-                    <i className="fas fa-user-circle icons"></i>
-                </span>
+          <Menu 
+            onClick={this.handleClick}
+            mode="horizontal">
+           <SubMenu title={<span><Icon type="appstore-o" /></span>}>
+           <MenuItemGroup>
+             <Menu.Item key="setting:1">Sobre este programa</Menu.Item>
+             <Menu.Item key="setting:2">Sair</Menu.Item>
+           </MenuItemGroup>
+            </SubMenu>
+            
+            <Menu.Item>Formulador</Menu.Item>
+            <Menu.Item>
+                
+                <Icon type="user"/></Menu.Item>
+             
+            <Menu.Item>
+                <Badge count={3}/>
+                <Icon type="bell"/></Menu.Item>
+                
+            </Menu>
 
-                <div id="openedItems">
-                    <ul>
-                        <li>
-                            <a href="#" className="active">Formulador</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-);
+        );
     }
 }

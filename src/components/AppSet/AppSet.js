@@ -1,7 +1,5 @@
 //import mainRouter from './../../routers/mainRouters';
 import AppSetBar from "react-osx-dock";
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-
 
 // Obrigado Fernanda Nubank pelo nome do componente
 export default class  AppSet extends React.Component {
@@ -16,7 +14,7 @@ export default class  AppSet extends React.Component {
             () => console.log(item)
              
              }>
-     <img src={`../assets/images/icons/${item}.png`} title={`Abre a tela de ${item}`}/>
+     <a href={`/${item}`}> <img src={`../assets/images/icons/${item}.png`} title={`Abre a tela de ${item}`}/></a>
       </AppSetBar.Item>
   ))}
  </AppSetBar>
