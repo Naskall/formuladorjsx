@@ -1,15 +1,13 @@
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-//import Navbar from './../components/navbar/navbar';
-
-
+import Navbar from './../components/NavBar/Navbar';
 
 //Pages
-//import Home from './../pages/home/home';
-//import About from './../pages/about/about';
-//import Recipes from './../pages/recipes/recipes';
-//import Lot from './../pages/lot/lot';
-//import Stock from './../pages/stock/stock';
-import Users from './../pages/usuarios/usuarios';
+import Home from './../pages/home/home';
+import Sobre from './../pages/sobre/sobre';
+import Receitas from './../pages/receitas/receitas';
+import Lote from './../pages/lote/lote';
+import Estoque from './../pages/estoque/estoque';
+import Usuarios from './../pages/usuarios/usuarios';
 
 const NotFoundPage = () => (
     <div>
@@ -17,27 +15,25 @@ const NotFoundPage = () => (
     </div>
 );
 
-export default class MainRouter extends React.Component {
+export default class mainRouter extends React.Component {
     constructor(){
         super();
         console.log(this);
     }
     render() {
         return (
-            <BrowserRouter>
-                <div>
-                    <Navbar />
+            <BrowserRouter>           
                     <Switch>
                         <Route path="/" component={Home} exact={true} />
-                        <Route path="/about" component={About} />
-                        <Route path="/users" component={Users}/>
-                        <Route path="/recipes" component={recipes}/>
-                        <Route path="/stock" component={Stock}/>
-                        <Route path="/lot" component={lot}/>
+                        <Route path="/sobre" component={Sobre} />
+                        <Route path="/usuarios" component={Usuarios}/>
+                        <Route path="/receitas" component={Receitas}/>
+                        <Route path="/estoque" component={Estoque}/>
+                        <Route path="/Lote" component={Lote}/>
 
                         <Route component={NotFoundPage} />
                     </Switch>
-                </div>
+               
             </BrowserRouter>
         )
     }
