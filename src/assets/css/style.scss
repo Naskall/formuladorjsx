@@ -8,9 +8,15 @@ body {
     background-image: url('../images/background.jpg');
    background-repeat: no-repeat;
     background-size: 100%;
-
 }
 
+#Content {
+    padding: 0 50px;
+    background: #cfe4e9;
+    padding: 24px;
+    min-height: 280px;
+    max-height: 100%;
+}
 a{
     outline: none;
     text-decoration: none;
@@ -221,7 +227,7 @@ a:visited {
     padding: 5px;
 }
 
-#dock-container {
+#dock-container a {
     margin-top: 30%;
     background-color: lemonchiffon;
 }
@@ -234,7 +240,10 @@ a:visited {
 #dock li {
     display: inline-block;
 }
-
+ .normalizeLink img{
+    width: 64px;
+    height: 64px;   
+ }
 #dock li img {
     width: 64px;
     height: 64px;

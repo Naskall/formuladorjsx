@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-import Navbar from './../components/NavBar/Navbar';
+import Navbar from './../components/Navbar/Navbar';
 
 //Pages
 import Home from './../pages/home/home';

@@ -14,7 +14,7 @@ export default class  AppSet extends React.Component {
             () => console.log(item)
              
              }>
-     <a href={`/${item}`}> <img src={`../assets/images/icons/${item}.png`} title={`Abre a tela de ${item}`}/></a>
+     <a href={`/${item}`} className="normalizeLink"><img src={`../assets/images/icons/${item}.png`} title={`Abre a tela de ${item}`}/></a>
       </AppSetBar.Item>
   ))}
  </AppSetBar>
