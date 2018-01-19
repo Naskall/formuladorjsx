@@ -23,11 +23,12 @@ export default class Main extends React.Component {
          <Header>
              <Navbar/>
              </Header>
-             <Content>
+             <Content id="Content">
              <Mainrouter />
              </Content>           
-            <Footer>
-                <AppSet/>                      
+           <Footer style={{backgroundColor:"#223637",color:"#fff",width:'100%',position:'absolute',bottom:-80}}>
+             <span>Por Oxsis 2018</span>
+            <AppSet/>                      
             </Footer>  
          </Layout>
          </div>

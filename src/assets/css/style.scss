@@ -6,13 +6,19 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: snow;
     background-image: url('../images/background.jpg');
-   background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
+
+
+.ant-input{
+    width: 325px;
+    }
+
 #Content {
     padding: 0 50px;
-    background: #cfe4e9;
+    background: #e0e0e0;
     padding: 24px;
     min-height: 280px;
     max-height: 100%;
@@ -56,9 +62,9 @@ a:visited {
 
 }
 .appset-bg{
-    background:#223637 ;
+    //background:#223637 ;
     border-radius: 2%;
-    width: 100%
+    width: auto;
 }
 
 #top-bar .icons{
@@ -233,6 +239,8 @@ a:visited {
 }
 
 #dock ul {
+    position: absolute;
+    bottom: 0;
     list-style: none;
     display: inline-block;
 }

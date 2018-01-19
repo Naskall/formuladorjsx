@@ -5,7 +5,8 @@ export default class home extends Component{
     render(){
         return(
             <div className="container">
-            <h1>Pagina home</h1>            
+            <h1>Pagina Home!</h1> 
+            <br /> Aqui ficarao relatorios etc           
             </div>
 
         );

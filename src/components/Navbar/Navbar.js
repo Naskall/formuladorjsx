@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Badge,Menu,Button, message,Dropdown} from 'antd';
+import {Badge,Menu,Button,Affix, message,Dropdown,Tooltip} from 'antd';
 import {Icon} from 'react-fa';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -30,12 +30,15 @@ render(){
             
             <Menu.Item key="2">Formulador</Menu.Item>
             <Menu.Item>
+                <Tooltip  title={"Veja seu perfil"}  placement="bottomRight">
+                <Icon name="user"/>
+                </Tooltip>
+                </Menu.Item>
                 
-                <Icon name="user" />Seu Perfil</Menu.Item>
-             
             <Menu.Item>
-                
+            <Tooltip  title={"Abrir noticias"}  placement="right">      
             <Icon name="bell" />
+            </Tooltip>
                 <Badge count={this.state.count}/>
             </Menu.Item>
 
