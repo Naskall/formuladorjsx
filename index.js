@@ -11,12 +11,9 @@ app.on('ready',()=>{
         resizable:false,
         movable:false,
         frame:false,
-        webPreferences:{backgroundThrottling:false}
-
+        
     });
-    mainWindow.loadURL(`file://${__dirname}/src/index.html`);
-})
 
-app.on('window-all-closed',()=>{
-    app.quit();    
-})
+    mainWindow.loadURL(`file://${__dirname}/src/index.html`);
+
+});

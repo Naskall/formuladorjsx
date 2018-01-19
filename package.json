@@ -4,8 +4,7 @@
     "description": "Gerenciador de formulações",
     "scripts": {
         "electron": "electron .",
-        "dev-server": "webpack-dev-server",
-        "start": "npm run dev-server",
+        "start": "webpack-dev-server",
         "test": "jest --watch",
         "win32": "electron-packager . EBM --platform=win32 --arch=ia32",
         "win64": "electron-packager . EBM --platform=win32 --arch=x64",
@@ -26,9 +25,9 @@
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-preset-env": "^1.6.0",
         "babel-preset-react": "^6.24.1",
-        "css-loader": "^0.28.7",
+        "css-loader": "^0.28.9",
         "directory-named-webpack-plugin": "^2.2.3",
-        "electron": "~1.7.8",
+        "electron": "~1.6.2",
         "file-loader": "^0.11.2",
         "jest": "^21.2.1",
         "node-sass": "^4.5.3",
@@ -71,7 +70,7 @@
         "redux": "^3.6.0",
         "redux-thunk": "^2.2.0",
         "webpack": "^3.10.0",
-        "webpack-dev-server": "^2.10.0",
+        "webpack-dev-server": "^2.11.0",
         "webpack-server": "^0.1.2"
     }
 }

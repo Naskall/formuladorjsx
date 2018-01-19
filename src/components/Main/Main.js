@@ -18,20 +18,22 @@ export default class Main extends React.Component {
  render(){
      console.log(Navbar)
      return(
-         <div>
+        
          <Layout className="layout">
          <Header>
              <Navbar/>
              </Header>
              <Content id="Content">
-             <Mainrouter />
+             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+               <Mainrouter />
+               </div>
              </Content>           
-           <Footer style={{backgroundColor:"#223637",color:"#fff",width:'100%',position:'absolute',bottom:-80}}>
-             <span>Por Oxsis 2018</span>
+              <Footer className="footer">
+                <img src="./../../assets/images/icons/oxsis_logo.png" style={{width:25,marginBottom:7}}/> <span>Por Oxsis 2018</span>
             <AppSet/>                      
             </Footer>  
          </Layout>
-         </div>
+        
      );
  }
 }
