@@ -30,7 +30,7 @@ export default class Main extends React.Component {
              </Content>           
               <Footer className="footer">
                 <img src="./../../assets/images/icons/oxsis_logo.png" style={{width:25,marginBottom:7}}/> <span>Por Oxsis 2018</span>
-            <AppSet/>                      
+                                  
             </Footer>  
          </Layout>
         
