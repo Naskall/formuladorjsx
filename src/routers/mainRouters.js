@@ -11,7 +11,11 @@ import Usuarios from './../pages/usuarios/usuarios';
 
 const NotFoundPage = () => (
     <div>
-        Você não deveria estar aqui! <Link to="/">Como foi que você chegou aqui? Me avise pelo e-mail: ksn7@ymail.com</Link>
+        <img src="./../assets/images/404.png"/><br />
+        Você não deveria estar aqui! Como foi que você chegou aqui? 
+        <br /><br />
+        Me avise pelo e-mail: <Link to="Mailto:ksn7@outlook.com">ksn7@outlook.com</Link>
+        <br /><br /><Link to="/"><button>Voltar</button></Link>
     </div>
 );
 

@@ -150,7 +150,7 @@ let lote = '001';
         >
           <SubMenu key="sub1" title={
              <span><Icon type="dot-chart" />
-                <span>Formulações Pré-definidas</span>
+                <span>Pré-definições</span>
             </span>}>
             <Menu.Item key="1">Exemplo 1</Menu.Item>
             <Menu.Item key="2">Exemplo 2</Menu.Item>

@@ -4,11 +4,10 @@ import {Layout,Tooltip,
 } from 'antd';
 const {Header,Content,Sider,Footer} = Layout;
 import Navbar from './../Navbar/Navbar';
-import AppSet from './../AppSet/AppSet';
-//import Navbar from './../NavBar/Navbar';
-//import NoticeBar from './../NoticeBar/NoticeBar';
+import MainRouter from './../../routers/mainRouters';
 
-import Mainrouter from './../../routers/mainRouters';
+//import AppSet from './../AppSet/AppSet';
+//import NoticeBar from './../NoticeBar/NoticeBar';
 //import usuarios from '../../pages/usuarios/usuarios';
 
 
@@ -21,11 +20,11 @@ export default class Main extends React.Component {
         
          <Layout className="layout">
          <Header>
-             <Navbar/>
+        <Navbar/>
              </Header>
              <Content id="Content">
-             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-               <Mainrouter />
+               <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+               <MainRouter />
                </div>
              </Content>           
               <Footer className="footer">

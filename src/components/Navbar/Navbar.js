@@ -1,40 +1,66 @@
 import React,{Component} from 'react';
 import {Badge,Menu,Button,Affix, message,Dropdown,Tooltip,Icon} from 'antd';
-
+import {NavLink} from 'react-router-dom';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
-export default class Navbar extends Component{
+class Navbar extends Component{
 
+
+    constructor(props){
+        super(props);
+    }
     state={
         count:0,
         show:true
     }
 
+    handleMenuClick = (e)=>{
+        console.log('click left button', e);
+        switch(parseInt(e.key)){
+            case 'receitas':
+            '/receitas';
+            break;
+            case 'estoque':
+            '/estoque';
+            break;
+            case 'lotes':
+            '/lotes';
+            break;
+
+            case 'sobre':
+            '/sobre';
+            break;
+        }
+    }
 
 render(){
     return(
-          <Menu  style={{position:'fixed', top:'0', width:'100%',zIndex:'1'}}
+    
+          <Menu style={{position:'fixed', top:'0', width:'100%',zIndex:'1'}}
                 theme="dark"
                 defaultSelectedKeys={['2']}
-                onClick={this.handleClick}
+                selectedKeys={[this.props.current]}
+                onClick={this.handleMenuClick}
                 mode="horizontal">
            <SubMenu title={<span>
                <Icon type="bars" /></span>}>
            <MenuItemGroup>
-             <Menu.Item key="setting:1" onclick="console.log('Eu que fiz')">
-             <Icon type="info-circle"/>Sobre este programa</Menu.Item>
-             <Menu.Item key="setting:2"><Icon type="logout"  />Sair</Menu.Item>
+             <Menu.Item key="sobre"><a href="/sobre">
+             <Icon type="info-circle"/>Sobre este programa</a></Menu.Item>
+             <Menu.Item key="logout"><Icon type="logout"  />Sair</Menu.Item>
            </MenuItemGroup>
             </SubMenu>
             
-            <SubMenu key="sub1" title={
-                
-                   <span><Icon type="calculator" />Formulador <Icon type="down" /></span>
-               }>
-               <Menu.Item key="1"><Icon type="file-text" />Receitas</Menu.Item>
-               <Menu.Item key="2"><Icon type="area-chart" />Estoque</Menu.Item>
-               <Menu.Item key="3"><Icon type="database" />Lote</Menu.Item>
+            <SubMenu key="sub1"
+            title={                
+                <span>
+                <Icon type="calculator" />Formulador <Icon type="down" />
+                </span>
+            }>
+               <Menu.Item key="receitas"><a href="/receitas"> <Icon type="file-text" />Receitas</a></Menu.Item>
+               <Menu.Item key="estoque"><a href="/estoque"><Icon type="area-chart" />Estoque</a></Menu.Item>
+               <Menu.Item key="lotes"><a href="/lotes"><Icon type="database" />Lote</a></Menu.Item>
            
              </SubMenu>
 
@@ -54,7 +80,9 @@ render(){
 
             
             </Menu>
-
+        
         );
     }
 }
+
+export default (Navbar);
