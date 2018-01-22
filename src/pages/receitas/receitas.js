@@ -13,7 +13,7 @@ import {Layout,
  const SubMenu = Menu.SubMenu;
  const { TextArea } = Input;
 
- const data = [{
+ const dataFormulador = [{
     key: '1',
     name: 'John Brown',
     age: 32,
@@ -96,36 +96,47 @@ let lote = '001';
         sortedInfo = sortedInfo || {};
         filteredInfo = filteredInfo || {};
         const columns = [{
-          title: 'Name',
-          dataIndex: 'name',
-          key: 'name',
+          title: 'Nome ID',
+          dataIndex: 'nomeID',
+          key: 'nomeID',
           filters: [
-            { text: 'Joe', value: 'Joe' },
-            { text: 'Jim', value: 'Jim' },
+            { text: '001', value: '1' },
+            { text: '002', value: '2' },
           ],
           filteredValue: filteredInfo.name || null,
           onFilter: (value, record) => record.name.includes(value),
           sorter: (a, b) => a.name.length - b.name.length,
-          sortOrder: sortedInfo.columnKey === 'name' && sortedInfo.order,
+          sortOrder: sortedInfo.columnKey === 'loteID' && sortedInfo.order,
         }, {
-          title: 'Age',
-          dataIndex: 'age',
-          key: 'age',
+          title: 'Lote ID',
+          dataIndex: 'loteID',
+          key: 'loteID',
           sorter: (a, b) => a.age - b.age,
-          sortOrder: sortedInfo.columnKey === 'age' && sortedInfo.order,
+          sortOrder: sortedInfo.columnKey === 'loteID' && sortedInfo.order,
         }, {
-          title: 'Address',
-          dataIndex: 'address',
-          key: 'address',
+          title: 'Concentração',
+          dataIndex: 'concentracao',
+          key: 'concentracao',
           filters: [
             { text: 'London', value: 'London' },
             { text: 'New York', value: 'New York' },
           ],
-          filteredValue: filteredInfo.address || null,
-          onFilter: (value, record) => record.address.includes(value),
-          sorter: (a, b) => a.address.length - b.address.length,
-          sortOrder: sortedInfo.columnKey === 'address' && sortedInfo.order,
-        }];
+         /* filteredValue: filteredInfo.concetracao || null,
+          onFilter: (value, record) => record.concetracao.includes(value),
+          sorter: (a, b) => a.concetracao.length - b.concetracao.length,
+          sortOrder: sortedInfo.columnKey === 'concetracao' && sortedInfo.order,*/
+        },
+      {
+        title:'Proporção',
+        dataIndex:'proporcao',
+        key:'proporcao',
+      },{
+        title:'Conc.Calculada',
+        dataIndex:'concal',
+        key:'concal',
+      }
+      
+      ];
 
         const header= `Se quiser formular é aqui mesmo!`
         const subtitle=`Preencha todos os dados necessarios que eu faço o resto pra você `
@@ -149,9 +160,15 @@ let lote = '001';
           //inlineCollapsed={this.state.collapsed}
         >
           <SubMenu key="sub1" title={
-             <span><Icon type="dot-chart" />
+             <Tooltip title="Formulações Pré-definidas" placement="right">
+            <span><Icon type="dot-chart" />
+            
                 <span>Pré-definições</span>
-            </span>}>
+                
+            </span>
+            </Tooltip>
+            }>
+            
             <Menu.Item key="1">Exemplo 1</Menu.Item>
             <Menu.Item key="2">Exemplo 2</Menu.Item>
             <Menu.Item key="3">Exemplo 3</Menu.Item>
@@ -192,11 +209,10 @@ let lote = '001';
         </Form>
         </TabPane>
 
-      <TabPane tab={<span><Icon type="bars" />Consultar</span>} key="2">
+      <TabPane tab={<span><Icon type="bars" />Ingredientes</span>} key="2">
       <Layout>
 
-      <Table columns={columns} dataSource={data} onChange={this.handleChange} />
-      <Table columns={columns} dataSource={data} onChange={this.handleChange} />
+      <Table columns={columns} dataSource={dataFormulador} onChange={this.handleChange} />
             
         </Layout>              
             </TabPane>      
