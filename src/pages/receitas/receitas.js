@@ -82,11 +82,11 @@ let lote = '001';
           sortedInfo: null,
         });
       }
-      setAgeSort = () => {
+      setNomeSort = () => {
         this.setState({
           sortedInfo: {
             order: 'descend',
-            columnKey: 'age',
+            columnKey: 'nomeID',
           },
         });
       }
@@ -103,15 +103,15 @@ let lote = '001';
             { text: '001', value: '1' },
             { text: '002', value: '2' },
           ],
-          filteredValue: filteredInfo.name || null,
-          onFilter: (value, record) => record.name.includes(value),
-          sorter: (a, b) => a.name.length - b.name.length,
+          filteredValue: filteredInfo.nomeID || null,
+          onFilter: (value, record) => record.nomeID.includes(value),
+          sorter: (a, b) => a.nomeID.length - b.nomeID.length,
           sortOrder: sortedInfo.columnKey === 'loteID' && sortedInfo.order,
         }, {
           title: 'Lote ID',
           dataIndex: 'loteID',
           key: 'loteID',
-          sorter: (a, b) => a.age - b.age,
+          sorter: (a, b) => a.loteID - b.loteID,
           sortOrder: sortedInfo.columnKey === 'loteID' && sortedInfo.order,
         }, {
           title: 'Concentração',
@@ -135,6 +135,18 @@ let lote = '001';
         dataIndex:'concal',
         key:'concal',
       }
+      ,
+      {
+        title:'Peso',
+        dataIndex:'peso',
+        key:'peso',
+      },
+      {
+        title:'Custo',
+        dataIndex:'custo',
+        key:'custo',
+      }
+      
       
       ];
 
@@ -149,7 +161,7 @@ let lote = '001';
       
         <Layout>
       
-      <Sider style={{position:'absolute',left:'0',top:'60px', minHeight:'90vh',height:'125vh'}}
+      <Sider style={{position:'absolute',left:'0',top:'60px', minHeight:'90vh',height:'125vh',zIndex:'2'}}
           collapsible
           collapsed={this.state.collapsed}
           onCollapse={this.onCollapse}
@@ -176,7 +188,7 @@ let lote = '001';
           </SubMenu>
         </Menu>
         </Sider>
-        <Layout style={{ marginLeft: 200 }}>
+        <Layout style={{ marginLeft: 50 }}>
             <Tabs defaultActiveKey="1">
              <TabPane tab={<span><Icon type="file-add" />Formular</span>} key="1">
            

@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
-
+@import url('./fonts.css');
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -13,6 +11,7 @@ body {
     }
 
 #Content {
+    font-family: 'PT Sans Narrow', sans-serif;
     padding: 0 50px;
     background: #e0e0e0;
     padding: 24px;
