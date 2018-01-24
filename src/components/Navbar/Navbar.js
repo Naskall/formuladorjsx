@@ -6,7 +6,6 @@ const MenuItemGroup = Menu.ItemGroup;
 
 class Navbar extends Component{
 
-
     constructor(props){
         super(props);
     }
@@ -51,6 +50,12 @@ render(){
              <Menu.Item key="logout"><Icon type="logout"  />Sair</Menu.Item>
            </MenuItemGroup>
             </SubMenu>
+           
+                <Menu.Item>
+                <Tooltip title={"Tela Inicial com Relatórios e Gráficos"}>
+                    <a href="/"><Icon type="dashboard"/>DashBoard</a>
+                    </Tooltip>
+                    </Menu.Item>
             
             <SubMenu key="sub1"
             title={                
